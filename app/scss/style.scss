@@ -1,0 +1,86 @@
+@import "modules/buttons.scss";
+
+//Пример с инета//
+@mixin large-text {
+  font: {//Вот здесь интересно как это в общем сфойстве прописуются подсвойства//
+    family: Arial;
+    size: 20px;
+    weight: bold;
+  }
+  color: #ff9000;
+}
+//Задание дз здесь>>>//
+@mixin red {
+	color: red;
+}
+
+@mixin blue {
+	color:blue;
+}
+//Осознанно втыкнул клас чтобы посмотреть как будет//
+@mixin green {
+	.green{
+	color: green;}
+}
+// Это согласно ДЗ//
+.red { 
+	@include red();
+}
+
+.blue { font-size: 22px;//Интеремно было//
+	@include blue();
+}
+//Upd HW//
+.type {
+	@include green ();
+}
+//extra//
+.exp1 {
+	@include large-text();
+}
+
+
+//задание по функцие из высотой//
+@function h($x) {
+	@return $x;
+}
+
+@function w($y) {
+	@return $y;
+}
+
+//extend
+%img_position {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+	 	img {
+	 		border: 2px solid blue; 
+	 	}
+
+}
+
+.exp2 {
+	@extend %img_position;
+	box-sizing: border-box;
+	img{
+	$height: h(200)*2px;
+	height: $height;
+	border-radius: 5px;
+	}
+}
+
+.exp3{
+	@extend %img_position;
+	box-sizing: border-box;
+	img{
+	$width: w(200)*1px;
+	width: $width;
+	height: 168*$width/300;
+	}
+}
+
+body {
+	background-color: #d9e3d9;
+
+}

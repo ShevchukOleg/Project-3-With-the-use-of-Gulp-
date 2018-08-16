@@ -1,0 +1,53 @@
+.btn {
+  display: inline-block;
+  color: #4b7263;
+  background: #afc09a;
+  padding: 30px;
+  border: 6px solid blue;
+  cursor: pointer; }
+
+.red {
+  color: red; }
+
+.blue {
+  font-size: 22px;
+  color: blue; }
+
+.type .green {
+  color: green; }
+
+.exp1 {
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff9000; }
+
+.exp2, .exp3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 20px; }
+  .exp2 img, .exp3 img {
+    border: 2px solid blue; }
+
+.exp2 {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .exp2 img {
+    height: 400px;
+    border-radius: 5px; }
+
+.exp3 {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  .exp3 img {
+    width: 200px;
+    height: 112px; }
+
+body {
+  background-color: #d9e3d9; }
+
+/*# sourceMappingURL=style.css.map */
