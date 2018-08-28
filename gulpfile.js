@@ -11,7 +11,7 @@ var onError = function(error){
 	return error.messageOriginal ?
 	"File: " + error.file +
 	"\rAt: " + error.line + error.column +
-	"r" + error.messageOriginal :
+	"\r" + error.messageOriginal :
 	error;
 };
 
