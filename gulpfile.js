@@ -32,10 +32,8 @@ gulp.task('sass', function(){
 	.pipe(sourcemaps.write('.'))
 	.pipe(plumber.stop())
     .pipe(gulp.dest('app/css'))
-    .pipe(notify('SCSS complete'))
     .pipe(browserSync.reload({stream: true}))
-    // .pipe(notify({message: 'SCSS created', onLast: true}))
-
+    .pipe(notify({message:'SCSS complete', onLast: true}))
 });
 
 gulp.task('browser-sync', function(){
@@ -62,8 +60,7 @@ gulp.task('clean', function() {
 
 gulp.task('build', ['clean', 'sass'], function() {
 	var buildCss = gulp.src([
-		'app/css/style.css',
-		'app/css/style.css.map'
+		'app/css/style.css'
 		])
 
 	.pipe(gulp.dest('dist/css'))
